@@ -1,0 +1,29 @@
+
+ * {padding: 0; margin: 0;}
+#myCanvas{
+    width: 50%;
+    background: #eee;
+    display: block;
+    margin: 0 auto;
+}
+#joystick_field{
+    display: flex;
+    justify-content: space-between;
+
+    height: 500px;
+    width: 70%;
+    background: #eee;
+    margin: auto;
+}
+.stick{
+    background-color: rgb(170, 57, 57);
+    width: 30%;
+    height: 90%;
+}
+
+#middle_stick{
+    background-color: rgb(48, 58, 150);
+}
+#right_stick{
+    
+}
