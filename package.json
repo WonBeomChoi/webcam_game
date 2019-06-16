@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@tensorflow/tfjs": "^1.0.4",
+    "express": "^4.17.1",
     "vega-embed": "^3.0.0"
   },
   "scripts": {
@@ -23,7 +24,7 @@
     "babel-preset-env": "~1.6.1",
     "clang-format": "~1.2.2",
     "cross-env": "^5.1.6",
-    "parcel-bundler": "~1.10.3",
+    "parcel-bundler": "^1.12.3",
     "yalc": "~1.0.0-pre.22"
   },
   "browserslist": [

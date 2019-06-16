@@ -21,7 +21,7 @@
   var lives = 3;
 
   var bricks = [];
- set_start = function (params) {
+  set_start = function (params) {
       
     canvas = document.getElementById("myCanvas");
     ctx = canvas.getContext("2d");
