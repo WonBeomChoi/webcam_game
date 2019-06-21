@@ -19,6 +19,7 @@
   var brickOffsetLeft = 30;
   var score = 0;
   var lives = 3;
+  var da = 0;
 
   var bricks = [];
   set_start = function (params) {
@@ -28,6 +29,7 @@
     ballRadius = 10;
     x = canvas.width/2;
     y = canvas.height-30;
+    da = da+1;
     dx = 2;
     dy = -2;
     paddleHeight = 10;
@@ -196,8 +198,8 @@
           paddleX -= 7;
       }
 
-      x += dx;
-      y += dy;
+      x += dx/da;
+      y += dy/da;
       requestAnimationFrame(draw);
   }
   

@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@tensorflow/tfjs": "^1.0.4",
+    "consolidate": "^0.15.1",
+    "ejs": "^2.6.2",
     "express": "^4.17.1",
+    "mustache": "^3.0.1",
     "vega-embed": "^3.0.0"
   },
   "scripts": {

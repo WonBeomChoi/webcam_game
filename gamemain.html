@@ -16,20 +16,20 @@ limitations under the License.
 -->
 <html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <title>Webcam Pacman</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-teal.min.css" />
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-teal.min.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
-  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script defer="" src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <link rel="stylesheet" href="./styles.css">
-  <link rel="stylesheet" href="./static/css/byuk.css">
-</head>
+  <link rel="stylesheet" href="./dist/byuk.69886b3f.css">
+<script src="./dist/styles.8986bff4.js"></script><script src="./dist/byuk.69886b3f.js"></script></head>
 <body>
   <div class="header">
 
     <div id="my-score">
-      내 기록
+      내 기록<span></span>
     </div>
     <div id="score-board">
       점수판
@@ -40,7 +40,6 @@ limitations under the License.
       웹캡이 없습니다. <br/>
       게임을 하시려면 웹캠이 있어야합니다.
     </div>
-    
     <canvas id="myCanvas" width="480" height="320"></canvas>
   <!-- Top -->
 
@@ -54,11 +53,11 @@ limitations under the License.
       <!-- Big buttons. -->
       <div class="panel-row big-buttons">
         <button id="train">
-          <img width="66" height="66" src="./images/button.svg" />
+          <img width="66" height="66" src="./dist/button.0ed11507.svg">
           <span id="train-status">TRAIN MODEL</span>
         </button>
         <button id="predict">
-          <img width="66" height="66" src="./images/button.svg" />
+          <img width="66" height="66" src="./dist/button.0ed11507.svg">
           <span>PLAY</span>
         </button>
       </div><!-- /.panel-row -->
@@ -74,7 +73,7 @@ limitations under the License.
             <div class="select">
               <select id="learningRate">
                 <option value="0.00001">0.00001</option>
-                <option selected value="0.0001">0.0001</option>
+                <option selected="" value="0.0001">0.0001</option>
                 <option value="0.01">0.001</option>
                 <option value="0.03">0.003</option>
               </select>
@@ -88,7 +87,7 @@ limitations under the License.
               <select id="batchSizeFraction">
                 <option value="0.05">0.05</option>
                 <option value="0.1">0.1</option>
-                <option selected value="0.4">0.4</option>
+                <option selected="" value="0.4">0.4</option>
                 <option value="1">1</option>
               </select>
             </div>
@@ -100,7 +99,7 @@ limitations under the License.
             <div class="select">
               <select id="epochs">
                 <option value="10">10</option>
-                <option selected value="20">20</option>
+                <option selected="" value="20">20</option>
                 <option value="40">40</option>
               </select>
             </div>
@@ -112,18 +111,17 @@ limitations under the License.
             <div class="select">
               <select id="dense-units">
                 <option value="10">10</option>
-                <option selected value="100">100</option>
+                <option selected="" value="100">100</option>
                 <option value="200">200</option>
               </select>
             </div>
           </div>
 
-        </div>
-        <!-- /.hyper-params -->
+        </div><!-- /.hyper-params -->
 
         <div class="webcam-box-outer">
           <div class="webcam-box-inner">
-            <video autoplay playsinline muted id="webcam" width="224" height="224"></video>
+            <video autoplay="" playsinline="" muted="" id="webcam" width="224" height="224"></video>
           </div>
         </div>
 
@@ -137,9 +135,9 @@ limitations under the License.
 
         <div class="panel-cell panel-cell-left panel-cell-fill">
           <p class="help-text">
-          Click to add the <br/>
-          current camera <br/>
-          view as an example <br/>
+          Click to add the <br>
+          current camera <br>
+          view as an example <br>
           for that control
           </p>
         </div><!-- ./panel-cell -->
@@ -148,9 +146,9 @@ limitations under the License.
           <div class="thumb-box">
             <div class="thumb-box-outer">
               <div class="thumb-box-inner">
-                <canvas class="thumb" width=224 height=224 id="up-thumb"></canvas>
+                <canvas class="thumb" width="224" height="224" id="up-thumb"></canvas>
               </div>
-              <button class="record-button" id="up"/><span>Add Sample</span></button>
+              <button class="record-button" id="up"><span>Add Sample</span></button>
             </div>
             <p>
               <span id="up-total">0</span> examples
@@ -167,9 +165,9 @@ limitations under the License.
           <div class="thumb-box">
             <div class="thumb-box-outer">
               <div class="thumb-box-inner">
-                <canvas class="thumb" width=224 height=224 id="left-thumb"></canvas>
+                <canvas class="thumb" width="224" height="224" id="left-thumb"></canvas>
               </div>
-              <button class="record-button" id="left"/><span>Add Sample</span></button>
+              <button class="record-button" id="left"><span>Add Sample</span></button>
             </div>
             <p>
               <span id="left-total">0</span> examples
@@ -178,14 +176,14 @@ limitations under the License.
         </div><!-- ./panel-cell -->
 
         <div class="panel-cell panel-cell-center panel-cell-fill">
-          <img height="108" width="129" src="./images/joystick.png" />
+          <img height="108" width="129" src="./dist/joystick.1c8d13a7.png">
         </div><!-- ./panel-cell -->
 
         <div class="panel-cell panel-cell-right">
           <div class="thumb-box">
             <div class="thumb-box-outer">
               <div class="thumb-box-inner">
-                <canvas class="thumb" width=224 height=224 id="right-thumb"></canvas>
+                <canvas class="thumb" width="224" height="224" id="right-thumb"></canvas>
               </div>
               <button class="record-button" id="right"><span>Add Sample</span></button>
             </div>
@@ -206,9 +204,9 @@ limitations under the License.
           <div class="thumb-box">
             <div class="thumb-box-outer">
               <div class="thumb-box-inner">
-                <canvas class="thumb" width=224 height=224 id="down-thumb"></canvas>
+                <canvas class="thumb" width="224" height="224" id="down-thumb"></canvas>
               </div>
-              <button class="record-button" id="down"/><span>Add Sample</span></button>
+              <button class="record-button" id="down"><span>Add Sample</span></button>
             </div>
             <p>
               <span id="down-total">0</span> examples
@@ -226,8 +224,9 @@ limitations under the License.
 
   </div><!-- /#controller -->
 
+  <p id="copyright">PAC-MAN&trade; &copy; BANDAI NAMCO Entertainment Inc.</p>
 
-  <script src="./static/js/game.js"></script>
-  <script src="index.js"></script>
+  <script src="./dist/game.8ceae8f7.js"></script>
+  <script src="./dist/webcam-transfer-learning.e31bb0bc.js"></script>
 </body>
 </html>
