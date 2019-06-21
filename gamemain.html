@@ -20,7 +20,11 @@ limitations under the License.
   <title>Webcam Pacman</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.cyan-teal.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">    
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
   <script defer="" src="https://code.getmdl.io/1.3.0/material.min.js"></script>
   <link rel="stylesheet" href="./styles.css">
   <link rel="stylesheet" href="./dist/byuk.69886b3f.css">
@@ -28,7 +32,7 @@ limitations under the License.
 <body>
   <div class="header">
 
-    <div id="my-score">
+    <div id="my-score" data-toggle="modal" data-target="#myModal">
       내 기록<span></span>
     </div>
     <div id="score-board">
@@ -224,8 +228,22 @@ limitations under the License.
 
   </div><!-- /#controller -->
 
-  <p id="copyright">PAC-MAN&trade; &copy; BANDAI NAMCO Entertainment Inc.</p>
-
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">  
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          <h1 id="username">닉네임 : </h1>
+          <h1 id="score">내 기록 : </h1>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-lg btn-primary btn-block" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="/static/js/user.js"></script>
   <script src="./dist/game.8ceae8f7.js"></script>
   <script src="./dist/webcam-transfer-learning.e31bb0bc.js"></script>
 </body>

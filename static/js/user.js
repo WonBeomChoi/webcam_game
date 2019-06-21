@@ -68,7 +68,8 @@ function login() {
     console.log('Request succeeded with JSON response', jsonData);
     if(jsonData==="true"){
       console.log("로그인");
-      window.location.href = "http://localhost:3000/game"
+      localStorage.id=username;
+      window.location.href = "http://localhost:3000/game";
     }else{
       console.log("실패");
       
@@ -79,8 +80,6 @@ function login() {
   });
   
 }
-
-
 var loginbt = document.getElementById("signin");
 loginbt.addEventListener('click',login);
 
